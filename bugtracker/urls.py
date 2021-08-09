@@ -17,9 +17,16 @@ from bugmgt import urls
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('',include('bugmgt.urls')),
-    # path('bugmgt/',include('bugmgt.urls')),
     path('admin/', admin.site.urls),
+    # path('bugmgt/',include('bugmgt.urls')),
+    path('dashboard/',include('dashboard.urls')),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += staticfiles_urlpatterns()

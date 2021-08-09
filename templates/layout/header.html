@@ -1,0 +1,85 @@
+{% block header_block %}
+<div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+    <!--begin::Container-->
+    <div class="container d-flex align-items-center justify-content-between" id="kt_header_container">
+        <!--begin::Page title-->
+        <div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-2 pb-2 pb-lg-0" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', lg: '#kt_header_container'}">
+            <!--begin::Heading-->
+            <h1 class="text-dark fw-bolder my-0 fs-2">Dashboard</h1>
+            <!--end::Heading-->
+            <!--begin::Breadcrumb-->
+            <ul class="breadcrumb fw-bold fs-base my-1">
+                <li class="breadcrumb-item text-muted">
+                    <a href="../../demo3/dist/index.html" class="text-muted">Home</a>
+                </li>
+                <li class="breadcrumb-item text-dark">Default</li>
+            </ul>
+            <!--end::Breadcrumb-->
+        </div>
+        <!--end::Page title=-->
+        <!--begin::Wrapper-->
+        <div class="d-flex d-lg-none align-items-center ms-n2 me-2">
+            <!--begin::Aside mobile toggle-->
+            <div class="btn btn-icon btn-active-icon-primary" id="kt_aside_toggle">
+                <!--begin::Svg Icon | path: icons/duotone/Text/Menu.svg-->
+                <span class="svg-icon svg-icon-2x">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <rect fill="#000000" x="4" y="5" width="16" height="3" rx="1.5" />
+                            <path d="M5.5,15 L18.5,15 C19.3284271,15 20,15.6715729 20,16.5 C20,17.3284271 19.3284271,18 18.5,18 L5.5,18 C4.67157288,18 4,17.3284271 4,16.5 C4,15.6715729 4.67157288,15 5.5,15 Z M5.5,10 L18.5,10 C19.3284271,10 20,10.6715729 20,11.5 C20,12.3284271 19.3284271,13 18.5,13 L5.5,13 C4.67157288,13 4,12.3284271 4,11.5 C4,10.6715729 4.67157288,10 5.5,10 Z" fill="#000000" opacity="0.3" />
+                        </g>
+                    </svg>
+                </span>
+                <!--end::Svg Icon-->
+            </div>
+            <!--end::Aside mobile toggle-->
+            <!--begin::Logo-->
+            <a href="../../demo3/dist/index.html" class="d-flex align-items-center">
+                {% load static %} <img alt="Logo" src="{% static 'media/logos/logo-demo-3.svg' %}" class="h-30px" />
+            </a>
+            <!--end::Logo-->
+        </div>
+        <!--end::Wrapper-->
+        <!--begin::Toolbar wrapper-->
+        <div class="d-flex flex-shrink-0">
+            <!--begin::Invite user-->
+            <div class="d-flex ms-3">
+                <a href="#" class="btn btn-flex flex-center btn-bg-white btn-text-gray-500 btn-active-color-primary w-40px w-md-auto h-40px px-0 px-md-6" tooltip="New Member" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">
+                    <!--begin::Svg Icon | path: icons/duotone/Communication/Add-user.svg-->
+                    <span class="svg-icon svg-icon-2 svg-icon-primary me-0 me-md-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                            <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                    <span class="d-none d-md-inline">New Member</span>
+                </a>
+            </div>
+            <!--end::Invite user-->
+            <!--begin::Create app-->
+            <div class="d-flex ms-3">
+                <a href="#" class="btn btn-flex flex-center btn-bg-white btn-text-gray-500 btn-active-color-primary w-40px w-md-auto h-40px px-0 px-md-6" tooltip="New App" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">
+                    <!--begin::Svg Icon | path: icons/duotone/Files/File.svg-->
+                    <span class="svg-icon svg-icon-2 svg-icon-primary me-0 me-md-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon points="0 0 24 0 24 24 0 24" />
+                                <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                <rect fill="#000000" x="6" y="11" width="9" height="2" rx="1" />
+                                <rect fill="#000000" x="6" y="15" width="5" height="2" rx="1" />
+                            </g>
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                    <span class="d-none d-md-inline">New App</span>
+                </a>
+            </div>
+            <!--end::Create app-->
+        </div>
+        <!--end::Toolbar wrapper-->
+    </div>
+    <!--end::Container-->
+</div>
+{% endblock %}
