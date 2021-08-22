@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dashboard',
-    'bugmgt'
+    'bugmgt',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'bugtracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,'templates'],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,8 +125,24 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Added Mannually
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_ROOT = BASE_DIR
 MEDIA_URL = "/media/"
+
+GOOGLE_API_KEY = ""
+RECAPTCHA_KEY = "6LcXhgkcAAAAAD_8aF2d3qKkjfO1ahbgKS6oZiaL"
+RECAPTCHA_SECRET_KEY = "6LcXhgkcAAAAAKkRET0iKZI0WxveM5mVlBh3i8_7"
+
+
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+# Default primary key field type
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+LOGIN_URL = "account:sign-in"
+LOGIN_REDIRECT_URL = "dashboard:index"
+LOGOUT_REDIRECT_URL = "account:sign-in"
+
+BASE_COUNTRY = "NG"
