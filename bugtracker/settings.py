@@ -77,6 +77,16 @@ WSGI_APPLICATION = 'bugtracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'sqlserver_ado',
+#         'NAME': 'bugtracker',
+#         'USER': 'django',
+#         'PASSWORD': '',
+#         'HOST': 'SAMAKOSH\\MSSQLSERVER2019',
+#     },
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -132,8 +142,8 @@ MEDIA_ROOT = BASE_DIR
 MEDIA_URL = "/media/"
 
 GOOGLE_API_KEY = ""
-RECAPTCHA_KEY = "6LcXhgkcAAAAAD_8aF2d3qKkjfO1ahbgKS6oZiaL"
-RECAPTCHA_SECRET_KEY = "6LcXhgkcAAAAAKkRET0iKZI0WxveM5mVlBh3i8_7"
+RECAPTCHA_KEY = ""
+RECAPTCHA_SECRET_KEY = ""
 
 
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
